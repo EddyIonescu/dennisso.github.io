@@ -37,7 +37,8 @@
                     });
                     return params;
                 })();
-                var color = "".concat("#", queryParams.color || "F15C4F")
+                var color = "".concat("#", queryParams.color || "F15C4F");
+                var word = queryParams.word || "bunsen";
 
                 var playerParams = {
                     width: (inIFrame && window.innerWidth) || parseInt(queryParams.w) || 1920,
@@ -872,7 +873,7 @@
         "",
         "normal 400 30px \"Avenir Black\"",
         "",
-        "bunsen",
+        word,
         2
       ],
       [
@@ -888,7 +889,7 @@
         "",
         "normal 400 30px \"Avenir Black\"",
         "",
-        "bunsen",
+        word,
         2
       ],
       [

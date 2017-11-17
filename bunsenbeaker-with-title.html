@@ -20,13 +20,11 @@
     div#everything {
       background: #0F3546;
       position: relative;
-      overflow: visible;
+      overflow: visible !important;
     }
 
     div#target {
-      margin-left: -200px;
       resize: both;
-      overflow: visible;
       position: relative;
     }
   </style>
@@ -47,9 +45,9 @@
         return params;
       })();
       var color = "".concat("#", queryParams.color || "F15C4F");
-      var word = queryParams.word || "bunsen";
+      var word = queryParams.word || "bunsennnnnnnnn";
 
-      var zoom = Math.min(window.innerHeight / 1000, window.innerWidth / 1400);
+      var zoom = Math.min(window.innerHeight / 1000, window.innerWidth / 1000);
       var playerParams = {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -58,6 +56,9 @@
         controlsEnabled: !!parseInt(queryParams.c) || false,
         zoom,
       };
+
+      wrapper.style.marginLeft = -Math.floor(playerParams.width / 2) + 'px';
+      wrapper.style.marginBottom = -Math.floor(window.innerHeight / 2) + 'px';
 
       var animation = {
         "meta": {

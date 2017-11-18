@@ -48,7 +48,7 @@
       var color = "".concat("#", queryParams.color || "F15C4F");
       var word = queryParams.word || "bunsennnnnnnnn";
 
-      var zoom = Math.min(window.innerHeight / 600, window.innerWidth / 800);
+      var zoom = Math.min(window.innerHeight / 520, window.innerWidth / 350);
       var playerParams = {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -58,8 +58,8 @@
         zoom,
       };
 
-      wrapper.style.marginLeft = -Math.floor(playerParams.width / 4) + 'px';
-      wrapper.style.marginBottom = -Math.floor(playerParams.height) + 'px';
+      wrapper.style.marginLeft = -Math.floor(70 + playerParams.width / (9 * zoom)) + 'px';
+      wrapper.style.paddingTop = Math.floor(playerParams.height / 200) + 'px';
 
       var animation = {
         "meta": {

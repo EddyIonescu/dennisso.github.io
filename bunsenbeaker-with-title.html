@@ -13,6 +13,7 @@
     html,
     body {
       margin: 0;
+      zoom: 1.4;
       padding: 0;
       background-color: #ffffff;
     }
@@ -47,7 +48,7 @@
       var color = "".concat("#", queryParams.color || "F15C4F");
       var word = queryParams.word || "bunsennnnnnnnn";
 
-      var zoom = Math.min(window.innerHeight / 1000, window.innerWidth / 1000);
+      var zoom = Math.min(window.innerHeight / 600, window.innerWidth / 800);
       var playerParams = {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -57,8 +58,8 @@
         zoom,
       };
 
-      wrapper.style.marginLeft = -Math.floor(playerParams.width / 2) + 'px';
-      wrapper.style.marginBottom = -Math.floor(window.innerHeight / 2) + 'px';
+      wrapper.style.marginLeft = -Math.floor(playerParams.width / 4) + 'px';
+      wrapper.style.marginBottom = -Math.floor(playerParams.height) + 'px';
 
       var animation = {
         "meta": {
@@ -80,6 +81,10 @@
           }
         },
         "anim": {
+          "dimension": [
+            playerParams.width*3,
+            playerParams.height*3,
+          ],
           "framerate": 60.0,
           "loop": false,
           "paths": [
